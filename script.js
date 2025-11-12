@@ -89,6 +89,7 @@ function QuoteGenerator() {
       [],
     ];
 
+    const coaPercent = 100 - nidaPercent;
     const headers = ['Service', 'Unit Cost', 'Quantity', 'Subtotal'];
     if (splitType === 'split') {
       headers.push(`${nidaPercent}% NIDA`, `${coaPercent}% COA`);
@@ -221,10 +222,7 @@ function QuoteGenerator() {
               React.createElement('button', {
                 onClick: addItem,
                 className: 'flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition'
-              },
-                React.createElement(Plus, { size: 20 }),
-                ' Add Item'
-              )
+              }, '➕ Add Item')
             ),
 
             React.createElement('div', { className: 'space-y-3' },
@@ -255,9 +253,7 @@ function QuoteGenerator() {
                   React.createElement('button', {
                     onClick: () => removeItem(index),
                     className: 'p-2 text-red-600 hover:bg-red-50 rounded-lg transition'
-                  },
-                    React.createElement(Trash2, { size: 20 })
-                  )
+                  }, '🗑️')
                 )
               )
             )
@@ -334,17 +330,11 @@ function QuoteGenerator() {
             React.createElement('button', {
               onClick: exportToExcel,
               className: 'flex-1 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition flex items-center justify-center gap-2'
-            },
-              React.createElement(FileSpreadsheet, { size: 20 }),
-              ' Export to Excel'
-            ),
+            }, '📊 Export to Excel'),
             React.createElement('button', {
               onClick: printQuote,
               className: 'flex-1 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition flex items-center justify-center gap-2'
-            },
-              React.createElement(Printer, { size: 20 }),
-              ' Print'
-            )
+            }, '🖨️ Print')
           )
         )
     )
