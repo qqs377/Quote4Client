@@ -243,9 +243,10 @@ function QuoteGenerator() {
                   React.createElement('div', { className: 'w-32' },
                     React.createElement('input', {
                       type: 'number',
-                      min: '1',
+                      min: '0.1',
+                      step: '0.1',
                       value: item.quantity,
-                      onChange: (e) => updateItem(index, 'quantity', parseInt(e.target.value) || 1),
+                      onChange: (e) => updateItem(index, 'quantity', parseFloat(e.target.value) || 1),
                       className: 'w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500',
                       placeholder: 'Qty'
                     })
