@@ -1,5 +1,4 @@
 const { useState } = React;
-const { Plus, Trash2, FileSpreadsheet, Printer } = lucide;
 
 const PRICE_DATA = {
   'Sample Prep-Simple': { unit: 'per sample', internal: 65, nonprofit: 94, forprofit: 96 },
