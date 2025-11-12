@@ -30,7 +30,7 @@ function QuoteGenerator() {
   const [clientName, setClientName] = useState('');
   const [priceType, setPriceType] = useState('internal');
   const [splitType, setSplitType] = useState('full');
-  const [nidaPercent, setNidaPercent] = useState(50);
+  const [nidaPercent, setNidaPercent] = useState(90);
   const [items, setItems] = useState([]);
   const [showQuote, setShowQuote] = useState(false);
 
