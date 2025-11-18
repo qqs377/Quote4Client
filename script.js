@@ -31,7 +31,15 @@ function QuoteGenerator() {
   const [priceType, setPriceType] = useState('internal');
   const [splitType, setSplitType] = useState('full');
   const [nidaPercent, setNidaPercent] = useState(90);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    { service: 'Sample Prep-Simple', quantity: 2 },
+    { service: 'Sample Prep-Trypsin', quantity: 2 },
+    { service: 'Sample Prep-Desalt', quantity: 2 },
+    { service: 'Sample Prep-NanoDrop', quantity: 2 },
+    { service: 'LCMSMS-Long gradient', quantity: 2 },
+    { service: 'DataAnalysis-Protein ID', quantity: 2 },
+    { service: 'Consulting', quantity: 0.25 }
+  ]);
   const [showQuote, setShowQuote] = useState(false);
 
   const addItem = () => {
